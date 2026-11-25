@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+option csharp_namespace = "RebornFrame.Spell.Audio";
+
+// 一条音效轨道。volume 为 0 时按 1 播放。clip_key 是 AudioClip 的 Resources 路径，或预先登记的键。
+message AudioSpellTrackConfig {
+  string clip_key = 1;
+  float volume = 2;
+  bool spatial = 3;
+}

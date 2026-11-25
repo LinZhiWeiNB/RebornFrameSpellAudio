@@ -1,0 +1,17 @@
+{
+  "name": "reborn.spell.audio",
+  "rootNamespace": "RebornFrame.Spell.Audio",
+  "references": [
+    "reborn.spell",
+    "reborn.protobuf"
+  ],
+  "includePlatforms": [],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "autoReferenced": true,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false
+}
