@@ -59,7 +59,7 @@ namespace RebornFrame.Spell.Audio.Tests
             _startup.Start(_world);
             var unit = _world.EntityManager.CreateEntity();
             _startup.InitializeUnit(unit, 1);
-            Assert.IsTrue(SpellAccess.TryBeginCast(_world.EntityManager, spell, 1, 0));
+            Assert.IsTrue(SpellAccess.TryBeginCast(_world.EntityManager, spell, 1));
             _startup.Tick(0);
 
             var sources = Object.FindObjectsByType<AudioSource>(FindObjectsInactive.Include, FindObjectsSortMode.None);
