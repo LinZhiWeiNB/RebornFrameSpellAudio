@@ -113,6 +113,19 @@ namespace RebornFrame.Spell.Audio
                 if (Application.isPlaying) UnityEngine.Object.Destroy(_host);
                 else UnityEngine.Object.DestroyImmediate(_host);
             }
+
+            public void Show(int frame, bool play)
+            {
+                if (_host == null) return;
+
+                _host.SetActive(true);
+                var seconds = Math.Max(0, frame) * SpellPresentation.FrameDuration;
+                if (_source.clip != null) seconds = Math.Min(seconds, _source.clip.length);
+                _source.Play();
+                _source.time = seconds;
+                if (play) _source.UnPause();
+                else _source.Pause();
+            }
         }
     }
 }
