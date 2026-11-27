@@ -114,12 +114,12 @@ namespace RebornFrame.Spell.Audio
                 else UnityEngine.Object.DestroyImmediate(_host);
             }
 
-            public void Show(int frame, bool play)
+            public void Show(float time, bool play)
             {
                 if (_host == null) return;
 
                 _host.SetActive(true);
-                var seconds = Math.Max(0, frame) * SpellPresentation.FrameDuration;
+                var seconds = Math.Max(0f, time);
                 if (_source.clip != null) seconds = Math.Min(seconds, _source.clip.length);
                 _source.Play();
                 _source.time = seconds;
